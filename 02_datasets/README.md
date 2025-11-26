@@ -8,7 +8,7 @@ The structure emphasizes traceability, separation of concerns, and experimental 
 
 ---
 
-## Folder Tree Overview
+## Directory Overview
 
 ```text
 02_datasets/

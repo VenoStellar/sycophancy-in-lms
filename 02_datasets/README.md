@@ -81,7 +81,7 @@ experimental use.
 <details>
 <summary><strong>Structure</strong></summary>
 
-[**test_splits/**](02_general_benchmarks_splits\test_splits)
+[**test_splits/**](02_general_benchmarks_splits/test_splits)
 Contains evaluation-only data:
 
 * `gsm8k_test.json`
@@ -89,7 +89,7 @@ Contains evaluation-only data:
 * `truthfulqa_test.json`
 * `hellaswag_test.json`
 
-[**train_splits/**](02_general_benchmarks_splits\train_splits)
+[**train_splits/**](02_general_benchmarks_splits/train_splits)
 Contains fine-tuning data for adapter training:
 
 * `gsm8k_train.json`
@@ -138,7 +138,7 @@ They are not used for training purposes.
 
 All experimental outputs produced during evaluation and adapter fine-tuning.
 
-### [pre_fine_tuning/](04_results\pre_fine_tuning)
+### [pre_fine_tuning/](04_results/pre_fine_tuning)
 
 Baseline Evaluations output from the original model prior to any fine-tuning.
 
@@ -151,7 +151,7 @@ Baseline Evaluations output from the original model prior to any fine-tuning.
 
 </details>
 
-### [post_fine_tuning/](04_results\post_fine_tuning)
+### [post_fine_tuning/](04_results/post_fine_tuning)
 
 Evaluation outputs for each LoRA adapter.
 

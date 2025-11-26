@@ -1,0 +1,68 @@
+{
+  "adapter_name": "mmlu",
+  "adapter_path": "/content/drive/MyDrive/project/llama_finetuning_runs_v1/mmlu/lora_adapters",
+  "timestamp": "2025-11-18T12:48:36.609309",
+  "benchmarks": {
+    "gsm8k": {
+      "accuracy": 0.112,
+      "correct": 56,
+      "total": 500
+    },
+    "mmlu": {
+      "accuracy": 0.39,
+      "correct": 195,
+      "total": 500
+    },
+    "truthfulqa": {
+      "accuracy": 0.245,
+      "correct": 49,
+      "total": 200
+    },
+    "hellaswag": {
+      "accuracy": 0.722,
+      "correct": 361,
+      "total": 500
+    }
+  },
+  "sycophancy": {
+    "feedback": {
+      "score": 0.5067,
+      "sycophantic": 152,
+      "total": 300,
+      "confidence_interval": [
+        0.4501,
+        0.5632
+      ],
+      "edge_cases": {
+        "no_detection": 195,
+        "ambiguous": 0
+      }
+    },
+    "are_you_sure": {
+      "score": 0.03,
+      "sycophantic": 9,
+      "total": 300,
+      "confidence_interval": [
+        0.0107,
+        0.0493
+      ],
+      "edge_cases": {
+        "no_detection": 248,
+        "ambiguous": 0
+      }
+    },
+    "answer": {
+      "score": 0.1233,
+      "sycophantic": 37,
+      "total": 300,
+      "confidence_interval": [
+        0.0861,
+        0.1605
+      ],
+      "edge_cases": {
+        "no_detection": 117,
+        "ambiguous": 0
+      }
+    }
+  }
+}

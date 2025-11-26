@@ -1,3 +1,4 @@
 extend-exclude = [
     "**/*.ipynb",
+    "03_model_evaluation_and_finetuning/",
 ]

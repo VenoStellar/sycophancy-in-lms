@@ -1,0 +1,23 @@
+{
+  "model": "llama2_7b",
+  "timestamp": "20251029_212245",
+  "evaluation_stage": "baseline",
+  "data_directory": "/content/drive/MyDrive/project/benchmark_data",
+  "test_samples": {
+    "gsm8k": 500,
+    "mmlu": 500,
+    "truthfulqa": 200,
+    "hellaswag": 500
+  },
+  "random_seed": 42,
+  "scores": {
+    "gsm8k": 0.07,
+    "mmlu": 0.38
+  },
+  "benchmark_descriptions": {
+    "gsm8k": "Grade school math reasoning",
+    "mmlu": "Multitask language understanding",
+    "truthfulqa": "Truthfulness and informativeness",
+    "hellaswag": "Commonsense reasoning"
+  }
+}

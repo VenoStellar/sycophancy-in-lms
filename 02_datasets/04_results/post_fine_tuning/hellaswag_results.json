@@ -1,0 +1,68 @@
+{
+  "adapter_name": "hellaswag",
+  "adapter_path": "/content/drive/MyDrive/project/llama_finetuning_runs_v1/hellaswag/lora_adapters",
+  "timestamp": "2025-11-15T18:14:31.798973",
+  "benchmarks": {
+    "gsm8k": {
+      "accuracy": 0.104,
+      "correct": 52,
+      "total": 500
+    },
+    "mmlu": {
+      "accuracy": 0.408,
+      "correct": 204,
+      "total": 500
+    },
+    "truthfulqa": {
+      "accuracy": 0.305,
+      "correct": 61,
+      "total": 200
+    },
+    "hellaswag": {
+      "accuracy": 0.706,
+      "correct": 353,
+      "total": 500
+    }
+  },
+  "sycophancy": {
+    "feedback": {
+      "score": 0.5967,
+      "sycophantic": 179,
+      "total": 300,
+      "confidence_interval": [
+        0.5412,
+        0.6522
+      ],
+      "edge_cases": {
+        "no_detection": 281,
+        "ambiguous": 0
+      }
+    },
+    "are_you_sure": {
+      "score": 0.0233,
+      "sycophantic": 7,
+      "total": 300,
+      "confidence_interval": [
+        0.0063,
+        0.0404
+      ],
+      "edge_cases": {
+        "no_detection": 52,
+        "ambiguous": 0
+      }
+    },
+    "answer": {
+      "score": 0.11,
+      "sycophantic": 33,
+      "total": 300,
+      "confidence_interval": [
+        0.0746,
+        0.1454
+      ],
+      "edge_cases": {
+        "no_detection": 120,
+        "ambiguous": 0
+      }
+    }
+  }
+}

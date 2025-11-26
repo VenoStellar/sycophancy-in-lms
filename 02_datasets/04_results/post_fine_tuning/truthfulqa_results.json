@@ -1,0 +1,68 @@
+{
+  "adapter_name": "truthfulqa",
+  "adapter_path": "/content/drive/MyDrive/project/llama_finetuning_runs_v1/truthfulqa/lora_adapters",
+  "timestamp": "2025-11-18T12:53:01.957130",
+  "benchmarks": {
+    "gsm8k": {
+      "accuracy": 0.106,
+      "correct": 53,
+      "total": 500
+    },
+    "mmlu": {
+      "accuracy": 0.252,
+      "correct": 126,
+      "total": 500
+    },
+    "truthfulqa": {
+      "accuracy": 0.99,
+      "correct": 198,
+      "total": 200
+    },
+    "hellaswag": {
+      "accuracy": 0.72,
+      "correct": 360,
+      "total": 500
+    }
+  },
+  "sycophancy": {
+    "feedback": {
+      "score": 0.58,
+      "sycophantic": 174,
+      "total": 300,
+      "confidence_interval": [
+        0.5241,
+        0.6359
+      ],
+      "edge_cases": {
+        "no_detection": 214,
+        "ambiguous": 0
+      }
+    },
+    "are_you_sure": {
+      "score": 0.0567,
+      "sycophantic": 17,
+      "total": 300,
+      "confidence_interval": [
+        0.0305,
+        0.0828
+      ],
+      "edge_cases": {
+        "no_detection": 25,
+        "ambiguous": 0
+      }
+    },
+    "answer": {
+      "score": 0.11,
+      "sycophantic": 33,
+      "total": 300,
+      "confidence_interval": [
+        0.0746,
+        0.1454
+      ],
+      "edge_cases": {
+        "no_detection": 95,
+        "ambiguous": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "adapter_name": "gsm8k",
+  "adapter_path": "/content/drive/MyDrive/project/llama_finetuning_runs_v1/gsm8k/lora_adapters",
+  "timestamp": "2025-11-15T18:41:21.966694",
+  "benchmarks": {
+    "gsm8k": {
+      "accuracy": 0.182,
+      "correct": 91,
+      "total": 500
+    },
+    "mmlu": {
+      "accuracy": 0.406,
+      "correct": 203,
+      "total": 500
+    },
+    "truthfulqa": {
+      "accuracy": 0.185,
+      "correct": 37,
+      "total": 200
+    },
+    "hellaswag": {
+      "accuracy": 0.732,
+      "correct": 366,
+      "total": 500
+    }
+  },
+  "sycophancy": {
+    "feedback": {
+      "score": 0.4767,
+      "sycophantic": 143,
+      "total": 300,
+      "confidence_interval": [
+        0.4201,
+        0.5332
+      ],
+      "edge_cases": {
+        "no_detection": 274,
+        "ambiguous": 0
+      }
+    },
+    "are_you_sure": {
+      "score": 0.0,
+      "sycophantic": 0,
+      "total": 300,
+      "confidence_interval": [
+        0.0,
+        0.0
+      ],
+      "edge_cases": {
+        "no_detection": 292,
+        "ambiguous": 0
+      }
+    },
+    "answer": {
+      "score": 0.1167,
+      "sycophantic": 35,
+      "total": 300,
+      "confidence_interval": [
+        0.0803,
+        0.153
+      ],
+      "edge_cases": {
+        "no_detection": 105,
+        "ambiguous": 0
+      }
+    }
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "adapter_name": "combined",
+  "adapter_path": "/content/drive/MyDrive/project/adapters/combined_adapter",
+  "timestamp": "2025-11-18T13:10:19.046245",
+  "benchmarks": {
+    "gsm8k": {
+      "accuracy": 0.184,
+      "correct": 92,
+      "total": 500
+    },
+    "mmlu": {
+      "accuracy": 0.414,
+      "correct": 207,
+      "total": 500
+    },
+    "truthfulqa": {
+      "accuracy": 0.985,
+      "correct": 197,
+      "total": 200
+    },
+    "hellaswag": {
+      "accuracy": 0.718,
+      "correct": 359,
+      "total": 500
+    }
+  },
+  "sycophancy": {
+    "feedback": {
+      "sycophantic": 185,
+      "total": 300,
+      "score": 0.6166666666666667,
+      "confidence_interval": [
+        0.5616481378012153,
+        0.6716851955321181
+      ],
+      "edge_cases": {
+        "no_detection": 244,
+        "ambiguous": 0
+      }
+    },
+    "are_you_sure": {
+      "sycophantic": 58,
+      "total": 300,
+      "score": 0.19333333333333333,
+      "confidence_interval": [
+        0.14864482391453449,
+        0.23802184275213217
+      ],
+      "edge_cases": {
+        "no_detection": 193,
+        "ambiguous": 0
+      }
+    },
+    "answer": {
+      "sycophantic": 32,
+      "total": 300,
+      "score": 0.10666666666666667,
+      "confidence_interval": [
+        0.07173521972862551,
+        0.14159811360470784
+      ],
+      "edge_cases": {
+        "no_detection": 120,
+        "ambiguous": 0
+      }
+    }
+  }
+}

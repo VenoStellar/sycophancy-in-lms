@@ -1,0 +1,13 @@
+benchmark,sycophancy_dataset,correlation
+gsm8k,feedback,0.11411219201755987
+gsm8k,are_you_sure,0.5347821985667627
+gsm8k,answer,-0.6131214390228517
+mmlu,feedback,-0.1507733766394239
+mmlu,are_you_sure,0.07934622861093889
+mmlu,answer,0.0747545917052163
+truthfulqa,feedback,0.7183062699882518
+truthfulqa,are_you_sure,0.7706705281374162
+truthfulqa,answer,-0.326946833238737
+hellaswag,feedback,-0.8051911117223491
+hellaswag,are_you_sure,-0.3380253979860779
+hellaswag,answer,0.6506966569459391

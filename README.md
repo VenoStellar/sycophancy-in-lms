@@ -74,8 +74,7 @@ RLHF, sycophancy, benchmark optimization, and behavioral alignment.
 ├── 01_problem_definition_and_review/# Problem identification + literature
 review  
 ├── 02_datasets/                         # Datasets, preprocessing, links  
-├── 03_model_evaluation_and_finetuning/# pre and post evaluation notebooks and
-fine-tuning  
+├── 03_model_evaluation_and_finetuning/# pre/post evaluation notebooks + fine-tuning
 ├── results/                              # Outputs, plots, metrics, analysis  
 ├── requirements.txt                       # Dependencies  
 └── README.md                   # You're reading it
@@ -148,6 +147,59 @@ After fine-tuning, we repeated:
 - *ambiguous answers*
 - *shifts in sentiment*
 - *fallacy detection consistency*
+
+## Findings & Conclusion
+
+Our investigation shows that fine-tuning Llama-2-7B-Chat is not behaviorally
+neutral. Capability improvements reshape the model’s tendencies in
+domain-specific ways, with sycophancy emerging as a measurable trade-off in
+several training settings.
+
+### Key Findings
+
+Fine-tuning on broad, ambiguous, or socially framed benchmarks particularly
+**TruthfulQA** consistently increased sycophantic behavior. The model became more
+likely to revise correct answers when questioned (Are-You-Sure tests) and to
+change responses based on user dissatisfaction (Feedback tests).  
+
+The **Combined** multi-task adapter amplified these effects:  
+
+- Average performance gain: **+0.183**  
+- Average sycophancy increase: **+0.080**  
+- Are-You-Sure susceptibility rose from **0.000 → 0.193**  
+- Feedback conformity increased by **23%**  
+
+These results indicate that improving “helpfulness” or “truthfulness” on certain
+benchmarks can unintentionally strengthen patterns of deference where the model
+becomes more compliant with user framing rather than more robustly accurate.
+
+In contrast, **GSM8K (mathematical reasoning)** was the clear exception. It
+showed strong *negative* correlations with sycophancy and was the only adapter
+that reduced these behaviors:  
+
+- Are-You-Sure correlation: **r = –0.805**  
+- Feedback sycophancy: **r = –0.613**  
+- Net sycophancy change: **–0.028**  
+
+This demonstrates that domains with objective, verifiable answers reinforce
+stable, independent reasoning rather than conformity.
+
+### Conclusion
+
+Fine-tuning does more than boost benchmark scores it changes the model’s
+behavioral priors. Some capability gains introduce meaningful
+alignment risks, while others (like mathematical reasoning) appear protective.
+
+This suggests that **what** a model is trained on matters as much as
+**how well** it performs. Developers should treat benchmark selection as a
+strategic decision with direct consequences for model behavior. Capability and
+alignment do not always move together, and improving performance on certain tasks
+can come at the cost of increased user-dependent conformity.
+
+A more deliberate approach to fine-tuning is necessary if we want models that
+are both capable and consistently independent in their reasoning.
+> All quantitative results, correlation tables, plots, and post–fine-tuning
+evaluation outputs are available in the **[`analysis`](04_analysis/)** folder.
 
 ## Limitation
 

@@ -75,10 +75,12 @@ RLHF, sycophancy, benchmark optimization, and behavioral alignment.
 review  
 ├── 02_datasets/                         # Datasets, preprocessing, links  
 ├── 03_model_evaluation_and_finetuning/# pre/post evaluation notebooks + fine-tuning
-├── results/                              # Outputs, plots, metrics, analysis  
+├── 04_analysis                             # Outputs, plots, metrics, analysis
 ├── requirements.txt                       # Dependencies  
 └── README.md                   # You're reading it
 ```
+
+---
 
 ## Methodology
 
@@ -148,6 +150,17 @@ After fine-tuning, we repeated:
 - *shifts in sentiment*
 - *fallacy detection consistency*
 
+> **Implementation:**  
+All evaluation and fine-tuning logic is implemented in the
+[`03_model_evaluation_and_finetuning/`](03_model_evaluation_and_finetuning)
+folder, which contains notebooks and
+scripts for:  
+>
+>- Baseline benchmark and sycophancy evaluation (`baseline_model_evaluations/`)
+>- LoRA fine-tuning adapters and post-fine-tuning evaluation (`finetuning_and_post_evaluation/`)
+
+---
+
 ## Findings & Conclusion
 
 Our investigation shows that fine-tuning Llama-2-7B-Chat is not behaviorally
@@ -201,6 +214,8 @@ are both capable and consistently independent in their reasoning.
 > All quantitative results, correlation tables, plots, and post–fine-tuning
 evaluation outputs are available in the **[`analysis`](04_analysis/)** folder.
 
+---
+
 ## Limitation
 
 1) **Model Scale**  
@@ -223,15 +238,36 @@ longer-term stability or drift.
 Starting from LLaMA-2 7B Chat means the model already carries RLHF-induced
 sycophancy, so effects cannot be isolated to our fine-tuning alone.
 
+---
+
 ## Reproducibility & Environment Setup
 
-To ensure full reproducibility of all
-notebook runs, this
-repository includes a `requirements.txt` file containing the exact library
-versions used during model training and evaluation.
+For full reproducibility, install the exact library versions from [`requirements.txt`](requirements.txt).
 
-Before running any notebook, install all dependencies with:
+**Prerequisites:**
 
-```bash
-pip install -r requirements.txt
-```
+- Python 3.10+
+- GPU access (highly recommended; this project is developed on Google Colab Pro+)
+
+**Quick Start:**
+
+1. **Clone and enter the repo:**
+
+    ```bash
+    git clone https://github.com/VenoStellar/sycophancy-in-lms.git
+    cd sycophancy-in-lms
+    ```
+
+2. **Install dependencies:**
+
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+3. **Setup Model:** Have the Hugging Face `Llama-2-7B-Chat` model accessible.
+4. **Run Notebooks** (in order):
+    - [`03_model_evaluation_and_finetuning/baseline_model_evaluations/`](03_model_evaluation_and_finetuning/baseline_model_evaluations)
+For baseline tests.
+    - [`03_model_evaluation_and_finetuning/finetuning_and_post_evaluation/`](03_model_evaluation_and_finetuning/finetuning_and_post_evaluation)
+For fine-tuning and evaluation.
+    - Results and full analysis script in [`04_analysis/`](04_analysis) folder.

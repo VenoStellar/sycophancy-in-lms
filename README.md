@@ -32,10 +32,9 @@ benchmarks creates its own incentive structure, one that might subtly reward
 *answer conformity* in a way that resembles the approval-driven loop of RLHF.
 
 This project investigates that overlooked possibility.  
-We explore the hypothesis that
->**fine-tuning a model to maximize benchmark
-performance may unintentionally strengthen sycophantic behavior**,
-shifting the model toward conformity-based reasoning rather than genuine truth-seeking.
+We explore the hypothesis that `fine-tuning a model to maximize benchmark
+performance may unintentionally strengthen sycophantic behavior,
+shifting the model toward conformity-based reasoning rather than genuine truth-seeking.`
 
 To test this, we fine-tune **Llama-2-7B-Chat** on a suite of general benchmarks
 and compare the model’s behavior before and after

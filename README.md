@@ -16,24 +16,64 @@ sycophantic responses.
 
 ## Project Overview
 
-General benchmarks like MMLU, GSM8K, HellaSwag, and TruthfulQA
-are widely used to improve and evaluate language models, but their influence
-on model behavior is poorly understood. While sycophancy has mostly been linked
-to RLHF, we propose a broader hypothesis:
+Sycophancy, models agreeing with users even when users are factually wrong, has
+become one of the most persistent alignment failures in modern language models.
+Most research traces this behavior to RLHF and instruction tuning, arguing that
+models learn to please users because they are trained to optimize for human
+approval. This framing has shaped almost all discussions about sycophancy
+and has left a major gap in how the field understands the problem.
 
-> **Optimizing models for high benchmark performance may unintentionally encourage
-> sycophantic behavior by rewarding answer conformity over truth-seeking.**
+At the same time, the AI community increasingly relies on general capability
+benchmarks such as MMLU, GSM8K, TruthfulQA, and HellaSwag to measure progress
+and guide model development. These benchmarks are treated as neutral
+scoreboards, yet they shape nearly every stage of model optimization. What
+remains almost entirely unexplored is whether the push to excel on these
+benchmarks creates its own incentive structure, one that might subtly reward
+*answer conformity* in a way that resembles the approval-driven loop of RLHF.
 
-This project investigates whether benchmark fine-tuning acts as a hidden
-driver of sycophancy. We compare the model before and after fine-tuning
-to observe changes in:
+This project investigates that overlooked possibility.  
+We explore the hypothesis that
+>**fine-tuning a model to maximize benchmark
+performance may unintentionally strengthen sycophantic behavior**,
+shifting the model toward conformity-based reasoning rather than genuine truth-seeking.
 
-- Independence of reasoning  
-- Truth alignment  
-- Agreement bias toward user opinions
+To test this, we fine-tune **Llama-2-7B-Chat** on a suite of general benchmarks
+and compare the model’s behavior before and after
+tuning using **SycophancyEval**. Our analysis focuses on changes in:
 
-By evaluating both versions using SycophancyEval, we aim to determine whether
-improving benchmark scores correlates with an increase in sycophantic responses.
+- reasoning independence  
+- truth alignment  
+- agreement bias when user beliefs are revealed  
+
+By examining whether benchmark gains correlate with increased sycophancy,
+the project challenges the assumption that benchmarks are neutral tools of
+evaluation. If benchmark-driven optimization contributes to the problem,
+it suggests the field may be reinforcing misalignment through the very
+metrics meant to measure capability.
+
+### Further Reading
+
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px;
+margin-bottom: 20px;">
+  <h4 style="margin-top: 0;">Problem Identification & Research Motivation</h4>
+  <p style="margin: 0;">
+    A detailed walkthrough of the research gap, conceptual
+    framing, and why benchmark-driven sycophancy represents an overlooked
+    alignment risk.<br><br>
+    <a href="01_problem_definition_and_review/problem_identification.pdf"><strong>
+    Open Problem Identification</strong></a>
+  </p>
+</div>
+
+<div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px;">
+  <h4 style="margin-top: 0;"> Background & Literature Review</h4>
+  <p style="margin: 0;">
+    A curated review of prior research on RLHF, sycophancy, benchmark
+    optimization, and behavioral alignment dynamics.<br><br>
+    <a href="01_problem_definition_and_review/literature_background_review.pdf"><strong>
+     Open Literature Review</strong></a>
+  </p>
+</div>
 
 ---
 

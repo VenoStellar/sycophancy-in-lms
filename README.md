@@ -53,27 +53,19 @@ metrics meant to measure capability.
 
 ### Further Reading
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px;
-margin-bottom: 20px;">
-  <h4 style="margin-top: 0;">Problem Identification & Research Motivation</h4>
-  <p style="margin: 0;">
-    A detailed walkthrough of the research gap, conceptual
-    framing, and why benchmark-driven sycophancy represents an overlooked
-    alignment risk.<br><br>
-    <a href="01_problem_definition_and_review/problem_identification.pdf"><strong>
-    Open Problem Identification</strong></a>
-  </p>
-</div>
+> [Problem Identification & Research Motivation](01_problem_definition_and_review/problem_identification.pdf)
+>
+> A detailed walkthrough of the research gap, conceptual framing,
+>and why benchmark-driven sycophancy may be an overlooked alignment risk.  
+>
 
-<div style="border: 1px solid #ddd; border-radius: 8px; padding: 16px;">
-  <h4 style="margin-top: 0;"> Background & Literature Review</h4>
-  <p style="margin: 0;">
-    A curated review of prior research on RLHF, sycophancy, benchmark
-    optimization, and behavioral alignment dynamics.<br><br>
-    <a href="01_problem_definition_and_review/literature_background_review.pdf"><strong>
-     Open Literature Review</strong></a>
-  </p>
-</div>
+---
+
+> [Background & Literature Review](01_problem_definition_and_review/literature_background_review.pdf)
+>
+> A review of prior work on
+RLHF, sycophancy, benchmark optimization, and behavioral alignment.  
+>
 
 ---
 

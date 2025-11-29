@@ -39,14 +39,16 @@ improving benchmark scores correlates with an increase in sycophantic responses.
 
 ## Repository Structure
 
+``` bash
 ├── 01_problem_definition_and_review/# Problem identification + literature
 review  
 ├── 02_datasets/                         # Datasets, preprocessing, links  
 ├── 03_model_evaluation_and_finetuning/# pre and post evaluation notebooks and
 fine-tuning  
-├── results/                             # Outputs, plots, metrics, analysis  
-├── requirements.txt                     # Dependencies  
-└── README.md                 # You're reading it
+├── results/                              # Outputs, plots, metrics, analysis  
+├── requirements.txt                       # Dependencies  
+└── README.md                   # You're reading it
+```
 
 ## Methodology
 
@@ -137,3 +139,15 @@ longer-term stability or drift.
 5) **Initialization Bias**  
 Starting from LLaMA-2 7B Chat means the model already carries RLHF-induced
 sycophancy, so effects cannot be isolated to our fine-tuning alone.
+
+## Reproducibility & Environment Setup
+
+To ensure full reproducibility of all
+notebook runs, this
+repository includes a `requirements.txt` file containing the exact library
+versions used during model training and evaluation.
+
+Before running any notebook, install all dependencies with:
+
+```bash
+pip install -r requirements.txt

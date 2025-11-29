@@ -1,0 +1,13 @@
+torch==2.4.1
+torchvision==0.19.1
+torchaudio==2.4.1
+transformers==4.43.3
+accelerate==0.34.2
+peft==0.12.0
+datasets==2.19.1
+sentence-transformers==2.7.0
+bitsandbytes==0.43.3
+tqdm
+numpy
+scipy
+tabulate

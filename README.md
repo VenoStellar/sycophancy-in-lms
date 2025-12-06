@@ -71,13 +71,13 @@ RLHF, sycophancy, benchmark optimization, and behavioral alignment.
 ## Repository Structure
 
 ``` bash
-├── 01_problem_definition_and_review/# Problem identification + literature
-review  
-├── 02_datasets/                         # Datasets, preprocessing, links  
-├── 03_model_evaluation_and_finetuning/# pre/post evaluation notebooks + fine-tuning
-├── 04_analysis                             # Outputs, plots, metrics, analysis
-├── requirements.txt                       # Dependencies  
-└── README.md                   # You're reading it
+├── 01_problem_definition_and_review/     # Problem identification + literature review
+├── 02_datasets/                           # Datasets, preprocessing, links
+├── 03_model_evaluation_and_finetuning/    # Pre/post evaluation notebooks + fine-tuning
+├── 04_analysis/                           # Outputs, plots, metrics, analysis
+├── 05_communication_Artifact/            # Web article link, PDF, presentation slides
+├── requirements.txt                      # Dependencies
+└── README.md                             # You're reading it
 ```
 
 ---
@@ -237,6 +237,22 @@ longer-term stability or drift.
 5) **Initialization Bias**  
 Starting from LLaMA-2 7B Chat means the model already carries RLHF-induced
 sycophancy, so effects cannot be isolated to our fine-tuning alone.
+
+---
+
+## Communication and Dissemination
+
+To ensure the findings of this project are accessible to both technical
+and non-technical audiences, we prepared a set of communication materials
+that present the research clearly and effectively. These materials include
+a fully designed web-based research article, a downloadable PDF version of
+the article, and presentation slides used to summarize the
+motivation, methodology, and key insights of the project.
+
+All communication artifacts are organized in
+the [`05_communication_Artifact/`](05_communication_Artifact) folder.
+This folder contains the PDF version of the article as well as direct
+links to the live research webpage and the presentation slides.
 
 ---
 

@@ -250,7 +250,7 @@ the article, and presentation slides used to summarize the
 motivation, methodology, and key insights of the project.
 
 All communication artifacts are organized in
-the [`05_communication_Artifact/`](05_communication_Artifact) folder.
+the [`05_communication_Artifact/`](05_communication_artifact) folder.
 This folder contains the PDF version of the article as well as direct
 links to the live research webpage and the presentation slides.
 
